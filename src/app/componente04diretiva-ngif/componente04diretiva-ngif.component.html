@@ -1,0 +1,8 @@
+<div>
+  <button (click)="ativarDesativarcoratual()" >Ligar/Desliga Coloração</button>
+  <button (click)="ativarDesativar()" >Ligar/Desliga</button>
+  <hr>
+  <div *ngIf="exibir" [ngStyle]="{ 'background-color': cor }"
+       style="width: 100px; height: 100px;">
+  </div>
+</div>
