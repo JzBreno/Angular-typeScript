@@ -1,5 +1,31 @@
+
+<!--  <ul>-->
+<!--    <li *ngFor="let n of nomes; index as indice">{{n}} - {{indice +1}}</li>-->
+<!--  </ul>-->
+  <div>
+    <div class="col-md-6">
+      <label for="">Dectoras disponíveis</label>
+      <div id="detectoras" style="display: flex; gap: 3px;">
+        <div class="checkbox" *ngFor="let n of detectoras" style="">
+          <label>
+            <input type="checkbox"> detectora {{n}}
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
 <div>
-  <ul>
-    <li *ngFor="let n of nomes; index as indice">{{n}} - {{indice +1}}</li>
-  </ul>
+  <div class="col-md-6">
+    <label for="">Dectoras disponíveis</label>
+    <div id="detectoras" class="row">
+      <div class="checkbox col-md-3" *ngFor="let detectora of detectoras">
+        <label>
+          <input type="checkbox"
+                 [value]="detectora"
+                 (change)="onCheckboxChange($event)"> detectora {{detectora}}
+        </label>
+      </div>
+    </div>
+  </div>
 </div>
+<!--https://www.youtube.com/watch?v=U2aUXay7hZc&ab_channel=LoianeGroner-->
